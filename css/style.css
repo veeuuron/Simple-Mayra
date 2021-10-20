@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
+}
+.container{
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0,0,0,0.3),transparent),url(../images/background.png);
+  background-size: cover;
+  background-position: center;
+  padding: 0 8%;
+  position: relative;
+}
+nav{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 5px 0;
+}
+.logo{
+  width: 120px;
+  cursor: pointer;
+}
+.cart-icon{
+  width: 30px;
+  cursor: pointer;
+}
+nav ul{
+  flex: 1;
+  text-align: right;
+  padding-right: 30px;
+}
+nav ul li{
+  display: inline-block;
+  list-style: none;
+  margin: 10px 30px;
+}
+nav ul li a{
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+}
+nav ul li a::after{
+  content: '';
+  width: 0%;
+  height: 3px;
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  transition:  width 0.4s;
+}
+nav ul li a:hover::after{
+  width: 85%;
+}
+.text-block{
+  color: #fff;
+  position: absolute;
+  bottom: 8%
+}
+.text-block p{
+  font-size: 50px;
+  font-weight: 600;
+}
+.text-block h1{
+  font-size:190px;
+  line-height:160px;
+  margin-left:-10px;
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+  background: url(../images/back.png);
+  -webkit-background-clip: text;
+  background-position: 0 0;
+  animation: back 20s linear infinite;
+}
+@keyframes back {
+ 100%{
+  background-position: 2500px 0;
+ } 
+}
+.text-block h3{
+  font-size: 40px;
+  font-weight: 500;
+}
+.text-block .row{
+  display: flex;
+  flex-wrap: wrap;
+  align-items:center;
+  margin-top: 30px;
+}
+.text-block a{
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin-right: 20px;
+  border: 2px solid #fff;
+  display: flex;
+  align-items: center;
+}
+.text-block a:hover{
+transform: scale(1.05);
+}
+.text-block a span{
+  font-size: 25px;
+  line-height: 15px;
+  margin-left: 5px;
+
+}
+.social{
+  position: absolute;
+  bottom: 8%;
+  right: 5%;
+}
+.social img{
+  display: block;
+  width: 30px;
+  margin: 25px 5px;
+}
